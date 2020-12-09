@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <title>Chomsky Hierarchy</title>
+  </head>
+  <body>
+    <!-- Start header -->
+    <header class="top-header">
+      <nav class="navbar header-nav navbar-expand-lg">
+          <div class="container-fluid">
+            <nav class="navbar ">
+              <span class="navbar-brand mb-0 h1">Kamtina Musyfirah</span>
+            </nav>
+
+              <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                  <ul class="navbar-nav">
+                      <li><a class="nav-link active" href="#">Home</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/tba-assignment1/">Teori Bahasa dan Otomata</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/tba-assignment2/">Notasi Big O</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/-Non-Deterministic-Finite-Automata/">DFA</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/RegulerExpression/">Regular Expression</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/Context-Free-Grammar/">Context Free Grammar</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/Push-Down-Automata/">Chomsky Hierarcy</a></li>
+                      <li><a class="nav-link" href="https://kamtinamusyfirah.github.io/RegulerExpression/">Mesin Turing</a></li>
+                      <li><a class="nav-link" href="#">About</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+  <!-- End header -->
+
+  <!--Carousel-->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Teori Bahasa dan Otomata</h1>
+    </div>
+  </div>
+  <!--End Carousel-->
+  <h1>Mesin Turing</h1>
+  <center><img src="hierarchy.PNG" alt=""></center>
+
+  <!-- section -->
+  <div class="container">
+    <div class="card">
+        <div class="contentBx">
+            <h2>Sejarah Mesin Turing</h2>
+            <p>
+              Diusulkan pada tahun 1936 oleh Alan Turing, seorang
+              matematikawan Inggris sebagai model matematis sederhana
+              sebuah komputer. Meskipun sederhana, Mesin Turing memiliki kemampuan
+              untuk menggambarkan perilaku komputer general-purpose.
+              Mesin Turing dapat digunakan untuk menghitung kelas fungsi
+              bilangan bulat yang dikenal sebagai fungsi rekursif sebagian
+              (partial recursive function). 
+            </p>
+            <p>
+              Sama seperti Finite State Automata dan Push Down Automata
+              yang dapat mengenali bahasa formal, maka mesin Turing juga
+              dapat berperan sebagai mesin pengenal bahasa formal. 
+              Bahasa yang dikenali oleh Mesin Turing adalah bahasa tanpa pembatasan (unrestricted language), yang disebut juga
+              himpunan terenumerasi rekursif (recursively enumerable set).
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="contentBx">
+          <h2>Mesin Turing</h2>
+          <p>
+            Sebuah mesin Turing M dilambangkan dengan notasi formal sebagai berikut:
+          </p>
+          <center>M = (Q, Σ, Γ, δ, q<sub>0</sub>, B, F)</center>
+            <p>
+              Q = the set of internal states
+            </p>
+            <p>
+              Σ = the input symbol
+            </p>
+            <p>
+              Γ = a finite set of symbols called the tape symbols
+            </p>
+            <p>
+              δ = the transaction function
+            </p>
+            <p>
+              q<sub>0</sub> = initial state
+            </p>
+            <p>
+              B = the blank symbols
+            </p>
+            <p>
+              F = set of final or accepting state
+            </p>
+          
+            <p>
+              Keadaan sebuah Mesin Turing setiap saat dicirikan oleh tiga hal:
+              <ol>
+                <li>Status sekarang (q)</li>
+                <li>Simbol yang sedang diterima/dibaca</li>
+                <li>Posisi head (“nomor sel” yang sedang dibaca) pada pita</li>
+              </ol>
+              <img src="ciri.PNG" alt="" style="width: 300px; display: block; margin-left: auto; margin-right: auto;">
+            </p>
+
+
+      </div>
+  </div>
+
+    <div class="card">
+      <div class="contentBx">
+          <h2>Model Mesin Turing</h2>
+          <p>
+            Sebuah mesin Turing terdiri dari komponen-komponen :
+          </p>
+          <ol>
+            <li>Pengendali berhingga (finite control)</li>
+            <li>Pita masukan dengan sifat:
+              <ol type="a">
+                <li>panjangnya tidak berhingga
+                  (ujung kiri terbatas terbatas, ujung kanan tidak terbatas terbatas)</li>
+                <li>dapat dibaca maupun ditulis</li>
+                <li>sel yang tidak berisi simbol masukan akan berisi
+                  simbol kosong (blank = B)
+                  </li>
+              </ol>
+            </li>
+          </ol>
+
+          <p>
+            Pada keadaan awal,
+            n sel pertama dari pita masukan berisi
+            rangkaian simbol yang harus dikenali (dinyatakan sebagai
+            a<sub>1</sub>, a<sub>2</sub>, . . . , a<sub>n</sub>).
+            Sel di sebelah kanan rangkaian simbol berisi B.
+          </p>
+          <img src="head.PNG" alt="" style="width: 300px; display: block; margin-left: auto; margin-right: auto;">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="contentBx">
+          <h2>Aksi Mesin Turing</h2>
+          <p>
+            Perilaku mesin Turing bergantung pada simbol masukan yang
+            berada pada posisi head read/write dan status dari Finite
+            Control. Dalam setiap pergerakannya, mesin Turing dapat melakukan melakukan
+            salah satu dari aksi berikut:
+            <ol>
+              <li>Berubah status</li>
+              <li>Menuliskan simbol pada pita masukan. Aksi penulisan ini
+                mengubah simbol yang sebelumnya berada pada sel tersebut.</li>
+              <li> Menggerakkan head ke kiri atau ke kanan.
+                <ol type="a">
+                  <li>Jika pada saat bergerak ke kanan untuk mencari ‘1’ ,
+                    mesin Turing M menjumpai simbol B, maka berarti
+                    banyaknya ‘0’ lebih dari banyaknya ‘1’.
+                    Kesimpulannya, string masukan tidak dikenali.</li>
+                  <li>Jika pada saat bergerak ke kiri M tidak menjumpai lagi ‘0’,
+                    maka M memeriksa apakah masih ada ‘1’. Bila habis
+                    maka string diterima (dikenali).</li>
+                  <li>Jika sebuah string diterima (dikenali), maka mesin Turing
+                    M berhenti. Untuk string yang tidak dikenali (ditolak) ada
+                    kemungkinan M tidak berhenti (looping).</li>
+                </ol>
+              </li>
+            </ol>
+          </p>
+          
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="contentBx">
+          <h2>Gerakan Mesin Turing</h2>
+          <p>
+            Gerakan mesin turing diwakili oleh fungsi transisi, contoh: <br>
+            δ(q <sub>0</sub>, 0) = (q <sub>1</sub>, 1, X) <br>
+          </p>
+          <p>
+            Jadi, awalnya statusnya itu ada di q<sub>0</sub>, dan membaca 0. Kemudian head nya bergerak menurut aturan produksinya sehingga
+            statusnya sekarang yaitu ada di q<sub>1</sub> dan menulis 1 menggantikan 0 yang tadi dan posisi read/write
+            bergerak ke arah X (berupa R=gerak kekanan atau L=gerak kekiri).
+          </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="contentBx">
+          <h2>Sumber</h2>
+          <p>
+            <a href="https://informatika.stei.itb.ac.id/~rinaldi.munir/TeoriKomputasi/2014-2015/IF5110%20-%20Mesin%20Turing%20(Bagian%201).pdf">https://informatika.stei.itb.ac.id/~rinaldi.munir/TeoriKomputasi/2014-2015/IF5110</a>
+          </p>
+          <p>
+            <center><a href="https://id.wikipedia.org/wiki/Mesin_Turing">https://en.wikipedia.org/wiki/Chomsky_hierarchy</a></center>
+          </p>
+      </div>
+    </div>
+
+  <div class="about1">
+    <h2>ABOUT</h2>
+    <hr>
+  </div>
+
+  <div class="about">
+    <div class="box">
+      <div class="icon">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+      </div>
+      <div class="details">
+        <h3>Sinjai</h3>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="icon">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </div>
+      <div class="details">
+        <h3>KamtinaMusyfirah</h3>
+      </div>
+    </div>
+    
+    <div class="box">
+      <div class="icon">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </div>
+      <div class="details">
+        <h3>kamtinamusyfirah12@gmail.com</h3>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
